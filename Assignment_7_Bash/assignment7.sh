@@ -61,12 +61,12 @@ fi
 IP=$(grep -E -o "([0-9]{1,3}\.){3}[0-9]{1,3}" "$FILE" | head -n 1)
 if [ -z "$IP" ]; then
     echo "Error: No IP address found in the webpage."
-    # rm "$FILE"
+    rm "$FILE"
 fi
 
 # Print the IP address and remove the temporary HTML file
 echo "The current IP address is: $IP"
-# rm "$FILE"
+rm "$FILE"
 
 
 echo "#########################################################################################"
